@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paper & Petal Studio | Links</title>
+  
+  <!-- Elegant Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-color: #FAFAF8; /* Luxurious off-white */
+      --text-color: #333333;
+      --accent-color: #AD8C8F; /* Dusty rose matched to logo */
+      --accent-hover: #8A6B6E;
+      --card-bg: rgba(255, 255, 255, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 1) 0%, transparent 60%);
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+      padding: 50px 30px;
+      background: var(--card-bg);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      animation: fadeIn 1s ease-out;
+    }
+
+    .logo {
+      width: 260px;
+      margin-bottom: 5px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Subtitle under the logo to replace the previous h1 */
+    .subtitle {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 45px;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-decoration: none;
+      background: transparent;
+      color: var(--text-color);
+      padding: 16px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border: 1px solid rgba(173, 140, 143, 0.3);
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .button i {
+      position: absolute;
+      left: 24px;
+      font-size: 18px;
+      color: var(--accent-color);
+      transition: all 0.4s ease;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--accent-color);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: -1;
+      border-radius: 50px;
+    }
+
+    .button:hover {
+      color: white;
+      border-color: var(--accent-color);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(173, 140, 143, 0.25);
+    }
+    
+    .button:hover i {
+      color: white;
+    }
+
+    .button:hover::before {
+      width: 100%;
+    }
+
+    .footer {
+      margin-top: 45px;
+      font-size: 10px;
+      opacity: 0.5;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Staggered animation for buttons */
+    .button:nth-child(1) { animation: fadeIn 0.6s ease-out 0.1s both; }
+    .button:nth-child(2) { animation: fadeIn 0.6s ease-out 0.2s both; }
+    .button:nth-child(3) { animation: fadeIn 0.6s ease-out 0.3s both; }
+    .button:nth-child(4) { animation: fadeIn 0.6s ease-out 0.4s both; }
+    .button:nth-child(5) { animation: fadeIn 0.6s ease-out 0.5s both; }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- I removed the H1 text since your beautiful new logo has the text built-in! -->
+    <!-- MAKE SURE TO SAVE YOUR ATTACHED IMAGE AS "logo.png" IN THE SAME FOLDER -->
+    <img src="logo.png" alt="Paper & Petal Studio Logo" class="logo">
+
+    <div class="subtitle">Creative Studio</div>
+
+    <div class="links-container">
+      <a class="button" href="https://www.facebook.com/paperandpetalstudio/" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+
+      <a class="button" href="https://www.instagram.com/paper_and_petal_studio?igsh=azZyaDltczhlempo&utm_source=qr" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+
+      <a class="button" href="https://www.tiktok.com/@paper.and.petal.s5?_r=1&_t=ZS-96ht5Xk6cXk" target="_blank">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+
+      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeiVIN51Nf5rzB3aDHyewPppVWu5hEUULrfOgTgv7gjzTyqhg/viewform" target="_blank">
+        <i class="far fa-calendar-alt"></i> Booking Form
+      </a>
+
+      <a class="button" href="https://wa.me/27766689842" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+    <div class="footer">
+      Elegant stationery • Bespoke designs • Creative moments
+    </div>
+
+
+
+  </div>
+</body>
+</html>
